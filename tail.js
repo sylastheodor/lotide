@@ -10,6 +10,7 @@ const tail = function(array) {
   return array.slice(1);
 };
 
-const words = ['AHHH'];
-console.log(tail(words));
+const words = [1, 2, 3, 4];
+tail(words);
+assertEqual([2, 3, 4], tail(words));
  
