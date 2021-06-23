@@ -15,18 +15,34 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-const without = function(source, itemsToRemove) {
-  let output = source
-  console.log(output)
-  for (let i = 0; i < source.length; i++){
-    for (let j = 0; j < itemsToRemove.length; j++){
-      if(source[i] === itemsToRemove[j]){
-        output.splice(source.indexOf(itemsToRemove[j]), 1) 
+const without = function(source, toRemove) {
+  let toInclude = true;
+  let newArray = [];
+  for (let element of source) {
+    toInclude = true;
+    for (let target of toRemove) {
+      if (element === target) {
+        toInclude = false;
       }
     }
+    if (toInclude) {
+      newArray.push(element);
+    }
   }
-  return output
+  return newArray;
 }
+// const without = function(source, itemsToRemove) {
+//   let output = source
+//   console.log(output)
+//   for (let i = 0; i < source.length; i++){
+//     for (let j = 0; j < itemsToRemove.length; j++){
+//       if(source[i] === itemsToRemove[j]){
+//         output.splice(source.indexOf(itemsToRemove[j]), 1) // this feels elite
+//       }
+//     }
+//   }
+//   return output
+// }
 
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
