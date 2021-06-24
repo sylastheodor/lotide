@@ -15,6 +15,28 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
+const without = function(source, itemsToRemove) {
+  let output = source
+  console.log(output)
+  for (let i = 0; i < source.length; i++){
+    for (let j = 0; j < itemsToRemove.length; j++){
+      if(source[i] === itemsToRemove[j]){
+        output.splice(source.indexOf(itemsToRemove[j]), 1) // this feels elite
+      }
+    }
+  }
+  return output
+} 
+
+
+
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
+assertArraysEqual(without(["69", 1, 44, 2, "2", 3], [1, "2", 44]), ["69", 2, 3]) // => [2, 3]
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3])
+assertArraysEqual(without(["1", "2", "3"], [1, "2", "3"]), ["1"]) // => ["1", "2"]
+
+/*
+I came up with that kind of crazy one with the triple method, but Andy in the chat came up with
 const without = function(source, toRemove) {
   let toInclude = true;
   let newArray = [];
@@ -31,22 +53,6 @@ const without = function(source, toRemove) {
   }
   return newArray;
 }
-// const without = function(source, itemsToRemove) {
-//   let output = source
-//   console.log(output)
-//   for (let i = 0; i < source.length; i++){
-//     for (let j = 0; j < itemsToRemove.length; j++){
-//       if(source[i] === itemsToRemove[j]){
-//         output.splice(source.indexOf(itemsToRemove[j]), 1) // this feels elite
-//       }
-//     }
-//   }
-//   return output
-// }
-
-
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]) // => [2, 3]
-assertArraysEqual(without(["69", 1, 44, 2, "2", 3], [1, "2", 44]), ["69", 2, 3]) // => [2, 3]
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3])
-assertArraysEqual(without(["1", "2", "3"], [1, "2", "3"]), ["1"]) // => ["1", "2"]
+///////this was my original plan but I think I messed up on the inner/outer loop placement.
+*/
 
