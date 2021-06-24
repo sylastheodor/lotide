@@ -13,12 +13,12 @@ let letterPositions = function(sentence) {
     console.log("textArray[i]:", textArray[i]);
     console.log("i:", i)
     if (textArray[i] in returnObj) {
-      returnObj[i].push(i)
+      returnObj[textArray[i]].push(i)
     } else {
-      returnObj[i] = [i]
+      returnObj[textArray[i]] = [i]
     }
   }
   console.log("returnObj:", returnObj)
 }
 
-  letterPositions("laugh")
+  letterPositions("lllaa")
