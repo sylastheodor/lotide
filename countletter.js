@@ -23,5 +23,5 @@ const countLetters = function (text) {
   console.log("returnObj:", returnObj)
   return returnObj 
 }
-//this should be all gucci
+//this should be all gucci 
 countLetters("Three e\'s and two d\'s")
