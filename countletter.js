@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countLetters = function (text) {
+const countLetters = function(text) {
   //first thing seperate all the letters
   //then for every new letter create an object propert
   //assign that propert how many times it
@@ -24,4 +24,4 @@ const countLetters = function (text) {
   return returnObj 
 }
 //this should be all gucci 
-countLetters("Three e\'s and two d\'s")
+countLetters("EEeee")
