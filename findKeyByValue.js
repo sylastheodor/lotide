@@ -22,3 +22,5 @@ const bestTVShowsByGenre = {
 };
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Simpsons"), "comedy")
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Simpsons"), "sci_fi")
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Drama belongs on the stage, bro"), "drama")

@@ -30,7 +30,7 @@ let letterPositions = function(sentence) {
     }
   }
   console.log("returnObj:", returnObj)
-  return returnObj
+  //return returnObj
 }
 
 
