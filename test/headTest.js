@@ -1,15 +1,11 @@
 const head = require('../head')
-const assertEqual = require('../assertEqual')
 const assert = require('chai').assert;
 
 describe("#head", () => {
-  it("returns 1 for [1, 2, 3]", () => {
-    assert.strictEqual(head([1, 2, 3]), 1);
+  it("returns Lighthouse for ['Lighthouse']", () => {
+    assert.strictEqual(head(["Lighthouse"]), "Lighthouse");
   });
-  it("returns '5' for ['5']", () => {
-    assert.strictEqual(head(['5']), '5'); 
+  it("returns false for []", () => {
+    assert.notEqual(head([]), '5'); 
   });
 });
-
-// assertEqual(head(["Lighthouse"]), "Lighthouse");
-// assertEqual(head([]), 5);

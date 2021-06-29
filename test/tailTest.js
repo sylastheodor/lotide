@@ -1,6 +1,8 @@
 const tail = require('../tail')
-const assertArraysEqual = require('../assertArraysEqual')
+const assert = require('chai').assert
 
-const words = [1, 2, 3, 4];
-tail(words);
-assertArraysEqual(tail(words), [2, 3, 4]);
+describe('#tail', function() {
+  it("returns [2, 3, 4] from [1, 2, 3, 4]", () => {
+  assert.deepEqual(tail([1, 2, 3, 4]), [2, 3, 4]); //looks like deepEqual is used for arrays/objects
+});
+})
