@@ -6,7 +6,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("Scorsese", 'sohsese');
-assertEqual(1, 999);
-assertEqual(40, 40);
-assertEqual('cream', 'cream');
+module.exports = assertEqual;
